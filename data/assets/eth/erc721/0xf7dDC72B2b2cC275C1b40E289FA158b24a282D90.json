@@ -1,0 +1,26 @@
+{
+	"symbol": "DEGEN",
+	"address": "0xf7dDC72B2b2cC275C1b40E289FA158b24a282D90",
+	"name": "PineappleArcadeTrophy",
+	"ens_address": "",
+	"website": "http://www.pineapplearcade.net/trophies",
+	"logo": {"src": "", "width": "", "height": "", "ipfs_hash": ""},
+	"support": {"email": "", "url": ""},
+	"social": {
+		"blog": "",
+		"chat": "",
+		"facebook": "",
+		"forum": "",
+		"github": "",
+		"gitter": "",
+		"instagram": "",
+		"linkedin": "",
+		"reddit": "https://www.reddit.com/r/pineapplearcade",
+		"slack": "",
+		"discord": "https://discord.gg/3AbutcS",
+		"telegram": "",
+		"twitter": "",
+		"youtube": ""
+	},
+	"meta": {}
+}

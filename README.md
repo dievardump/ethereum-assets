@@ -1,51 +1,93 @@
+# What is it 
+
+This is an open list of on-chain assets, sorted by networks.
+
 # Background
 
-This is a project which emerged from the ashes of [MyEtherWallet/ethereum-lists](https://github.com/MyEtherWallet/ethereum-lists) after the split of MyEtherWallet and MyCrypto. For some more context see [this blog post](http://walleth.org/2018/02/15/ethereum-lists).
+This is originally a fork of [https://github.com/ethereum-lists/tokens](https://github.com/ethereum-lists/tokens) as of 2018-04-17
 
-# Tokens
+I decided to not use the original repository because :
+- my goal is to list all possible networks "assets" (current and future) and not only ERC20 compatible.
+- I want to offer a bigger flexibility about the data to export
+- the other repository uses Java as a dependency and I don't have nor want Java on my machine
 
-Information related to tokens. ERC-20 compliant or compatible only, please.
+# Assets
+
+All types of assets are welcome. 
+
+As of now, assets are sorted into erc20 and erc721 but any EIP/type of tokens can be added as long as there is enough informations 
+
+## Format
+
+The assets are saved in the directory `/data/assets`
+
+They are sorted by Network (eth, kov, ...) and the by type (erc20, erc721, ...) and saved as a JSON file, that has for name the address of the asset contract in the chain.
+
+As example, the (in)famous CryptoKitties' asset file has for path `/data/assets/eth/erc721/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d.json`
 
 ## Fields:
 
-### Mandatory
+### Required
 
--  `symbol`:    Short ticker style symbol of token.
--  `name`:      Longer human version of token.
--  `address`:   Ethereum (or other chain) address of ERC-20 token.
--  `decimals`:  The decimals of the token. As Number and not String.
+-  `address`:   On-chain address of the asset contract.
+-  `name`:      Longer human version of asset name.
+-  `symbol`:    Short ticker style symbol of asset.
 
 
 ### Optional
 
--  `logo`:      An optional logo of your token. Must be a **square** (recommended: 128x128) PNG w/ transparent background. Please compress using https://tinypng.com/
--  `support`:   A support email, support URL, or other way people can get assistance regarding the token.
--  `github`:    Where token or project-related code lives.
--  `community`: Twitter, Reddit, Slack or wherever else people hang out.
+-  `meta`:      Meta data that brings informations to the asset. For example, contains `decimals` for erc20 tokens
 -  `website`:   Official URL of the website.
+-  `logo`:      An optional link to the logo of your asset.
+-  `support`:   A support email, support URL, or other way people can get assistance regarding the asset.
+-  `github`:    Where assets or assets-related code lives.
+-  `community`: Twitter, Reddit, Slack or wherever else people hang out.
 
 
-# The assembled lists
+# The builds
 
-This repository has the tokens as single files. This makes it easier for contributors to add new tokens, for reviewers to get a good view on the change and also makes it easier to merge in tokens from other sources. Projects will most likely want to use the assembled lists. The CI server is already building them - so you can just [go to the commit-list](https://github.com/ethereum-lists/tokens/commits/master) and click on the green checkmark behind the last commit. There you see kontinuum/run - and the details link there brings to the assembled files on IPFS.
+in `/dist` you will find the last build `assets.json` containing a big object with all types of assets sorted by networks.
 
-# Usages
+You can rebuild this list locally using the npm command `npm run build`
 
-- [WallETH](http://walleth.org)
-- [MyCrypto](http://mycrypto.com)
-- [TREZOR](https://trezor.io/) - they even [import via IPFS ;-)](https://github.com/trezor/trezor-common/blob/master/ethereum_tokens-gen.py)
-- please let us know when you do (you don't need to but it would be nice!)
+@TODO : Add default build to a CDN ?
 
-# Maintainers
+## Custom Build
 
-- [409H](https://github.com/409H) (409H - EtherAddressLookup)
+Custom builds are possible, selecting networks, types of asset and properties you want included in your build.
 
-- [tayvano](https://github.com/tayvano) (tayvano - [MyCrypto](http://mycrypto.com))
+The command is the same `npm run build` followed by `-- ` and a list of arguments.
+The build will be saved in `/dist/custom/`
 
-- [ligi](https://github.com/ligi) (ligi - [WallETH](http://walleth.org))
+### Custom build arguments
 
-- You!
+For every option, if not given, will take all the available ones.
+Options values are comma separated
 
-# A last note
+| Option | Description |
+| --- | --- |
+| `--network-id` | if present in `/data/networks.json`, uses the network id as key in the exported object (default uses directory name) |
+| `--networks`       | list of networks (directory name) to add to your build. |
+| `--assets`         | list of assets types (directory name) to add to every network. |
+| `--properties`     | list of properties to add to every type. `symbol`, `name`, `address` and `meta` if in the object, will always be included. Sub properties filtering is not supported. If used without value, will only keep the mandatory fields. |
 
-This list is maintained by volunteers in the community &amp; people like you around the internet. It may not always be up to date, and it may occasionally get it wrong. If you find an error or omission, please open an issue or make a PR with any corrections.
+
+### Example 
+
+Example of command that will only export Tokens for the Main Ethereum network and the Kovan Network, with only logo and website (and the required one):
+
+`npm run build -- --networks=eth,kov --assets=erc20 --properties=logo,website`
+
+Note the use of ` -- ` between the command name and the arguments.
+
+# Contribution 
+
+You can add your assets, or any assets you know off and missing, using merge requests. I will try to review them and add them to the repository.
+
+# Note 
+
+I am not willing to split the efforts with the original repository. But our goals are not the same. I am building this repository mainly because I will use it in a personal project, including all type of assets on the different networks.
+
+# Donation
+
+Not against any donation if this repo helps you in any way and you want to say thank you.

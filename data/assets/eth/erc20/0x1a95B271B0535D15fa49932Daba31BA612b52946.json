@@ -1,0 +1,25 @@
+{
+	"symbol": "MNE",
+	"address": "0x1a95B271B0535D15fa49932Daba31BA612b52946",
+	"name": "Minereum",
+	"ens_address": "",
+	"website": "",
+	"logo": {"src": "", "width": "", "height": "", "ipfs_hash": ""},
+	"support": {"email": "", "url": ""},
+	"social": {
+		"blog": "",
+		"chat": "",
+		"facebook": "",
+		"forum": "",
+		"github": "",
+		"gitter": "",
+		"instagram": "",
+		"linkedin": "",
+		"reddit": "",
+		"slack": "",
+		"telegram": "",
+		"twitter": "",
+		"youtube": ""
+	},
+	"meta": {"decimals": 8}
+}

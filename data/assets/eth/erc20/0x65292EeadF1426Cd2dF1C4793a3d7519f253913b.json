@@ -1,0 +1,25 @@
+{
+	"symbol": "COSS",
+	"address": "0x65292EeadF1426Cd2dF1C4793a3d7519f253913b",
+	"name": "COSS",
+	"ens_address": "",
+	"website": "https://coss.io",
+	"logo": {"src": "", "width": "", "height": "", "ipfs_hash": ""},
+	"support": {"email": "info@coss.io", "url": ""},
+	"social": {
+		"blog": "",
+		"chat": "",
+		"facebook": "",
+		"forum": "",
+		"github": "",
+		"gitter": "",
+		"instagram": "",
+		"linkedin": "",
+		"reddit": "",
+		"slack": "",
+		"telegram": "",
+		"twitter": "",
+		"youtube": ""
+	},
+	"meta": {"decimals": 18}
+}

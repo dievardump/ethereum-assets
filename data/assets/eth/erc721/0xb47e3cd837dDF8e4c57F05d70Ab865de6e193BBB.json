@@ -1,0 +1,26 @@
+{
+	"symbol": "C",
+	"address": "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB",
+	"name": "CryptoPunks",
+	"website": "https://www.larvalabs.com/cryptopunks",
+	"ens_address": "",
+	"logo": {"src": "", "width": "", "height": "", "ipfs_hash": ""},
+	"support": {"email": "", "url": ""},
+	"social": {
+		"blog": "",
+		"chat": "",
+		"facebook": "",
+		"forum": "",
+		"github": "",
+		"gitter": "",
+		"instagram": "",
+		"linkedin": "",
+		"reddit": "https://www.reddit.com/r/cryptopunk/",
+		"slack": "",
+		"discord": "https://discordapp.com/invite/tQp4pSE",
+		"telegram": "",
+		"twitter": "",
+		"youtube": ""
+	},
+	"meta": {}
+}

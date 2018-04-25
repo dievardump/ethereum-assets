@@ -1,0 +1,25 @@
+{
+	"symbol": "STORJ",
+	"address": "0xB64ef51C888972c908CFacf59B47C1AfBC0Ab8aC",
+	"name": "Storj",
+	"ens_address": "",
+	"website": "",
+	"logo": {"src": "", "width": "", "height": "", "ipfs_hash": ""},
+	"support": {"email": "", "url": ""},
+	"social": {
+		"blog": "",
+		"chat": "",
+		"facebook": "",
+		"forum": "",
+		"github": "",
+		"gitter": "",
+		"instagram": "",
+		"linkedin": "",
+		"reddit": "",
+		"slack": "",
+		"telegram": "",
+		"twitter": "",
+		"youtube": ""
+	},
+	"meta": {"decimals": 8}
+}

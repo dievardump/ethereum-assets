@@ -1,0 +1,25 @@
+{
+	"symbol": "NMR",
+	"address": "0x1776e1F26f98b1A5dF9cD347953a26dd3Cb46671",
+	"name": "Numeraire",
+	"ens_address": "",
+	"website": "",
+	"logo": {"src": "", "width": "", "height": "", "ipfs_hash": ""},
+	"support": {"email": "", "url": ""},
+	"social": {
+		"blog": "",
+		"chat": "",
+		"facebook": "",
+		"forum": "",
+		"github": "",
+		"gitter": "",
+		"instagram": "",
+		"linkedin": "",
+		"reddit": "",
+		"slack": "",
+		"telegram": "",
+		"twitter": "",
+		"youtube": ""
+	},
+	"meta": {"decimals": 18}
+}

@@ -1,0 +1,25 @@
+{
+	"symbol": "HDG",
+	"address": "0xfFe8196bc259E8dEDc544d935786Aa4709eC3E64",
+	"name": "Hedge",
+	"ens_address": "",
+	"website": "https://www.hedge-crypto.com",
+	"logo": {"src": "", "width": "", "height": "", "ipfs_hash": ""},
+	"support": {"email": "info@hedge-crypto.com", "url": ""},
+	"social": {
+		"blog": "",
+		"chat": "",
+		"facebook": "",
+		"forum": "",
+		"github": "",
+		"gitter": "",
+		"instagram": "",
+		"linkedin": "",
+		"reddit": "",
+		"slack": "",
+		"telegram": "",
+		"twitter": "",
+		"youtube": ""
+	},
+	"meta": {"decimals": 18}
+}

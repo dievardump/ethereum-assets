@@ -1,0 +1,25 @@
+{
+	"symbol": "MIT",
+	"address": "0xe23cd160761f63FC3a1cF78Aa034b6cdF97d3E0C",
+	"name": "MIT",
+	"ens_address": "",
+	"website": "",
+	"logo": {"src": "", "width": "", "height": "", "ipfs_hash": ""},
+	"support": {"email": "", "url": ""},
+	"social": {
+		"blog": "",
+		"chat": "",
+		"facebook": "",
+		"forum": "",
+		"github": "",
+		"gitter": "",
+		"instagram": "",
+		"linkedin": "",
+		"reddit": "",
+		"slack": "",
+		"telegram": "",
+		"twitter": "",
+		"youtube": ""
+	},
+	"meta": {"decimals": 18}
+}

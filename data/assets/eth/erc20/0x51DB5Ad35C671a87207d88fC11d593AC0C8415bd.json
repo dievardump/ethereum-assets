@@ -1,0 +1,25 @@
+{
+	"symbol": "MDA",
+	"address": "0x51DB5Ad35C671a87207d88fC11d593AC0C8415bd",
+	"name": "Moeda Loyalty...",
+	"ens_address": "",
+	"website": "",
+	"logo": {"src": "", "width": "", "height": "", "ipfs_hash": ""},
+	"support": {"email": "", "url": ""},
+	"social": {
+		"blog": "",
+		"chat": "",
+		"facebook": "",
+		"forum": "",
+		"github": "",
+		"gitter": "",
+		"instagram": "",
+		"linkedin": "",
+		"reddit": "",
+		"slack": "",
+		"telegram": "",
+		"twitter": "",
+		"youtube": ""
+	},
+	"meta": {"decimals": 18}
+}

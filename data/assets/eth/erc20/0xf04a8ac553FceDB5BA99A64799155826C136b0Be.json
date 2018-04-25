@@ -1,0 +1,25 @@
+{
+	"symbol": "FLIXX",
+	"address": "0xf04a8ac553FceDB5BA99A64799155826C136b0Be",
+	"name": "Flixxo",
+	"ens_address": "",
+	"website": "http://flixxo.com",
+	"logo": {"src": "", "width": "", "height": "", "ipfs_hash": ""},
+	"support": {"email": "", "url": "info@flixxo.com"},
+	"social": {
+		"blog": "",
+		"chat": "",
+		"facebook": "",
+		"forum": "",
+		"github": "",
+		"gitter": "",
+		"instagram": "",
+		"linkedin": "",
+		"reddit": "",
+		"slack": "",
+		"telegram": "t.me/flixxo",
+		"twitter": "",
+		"youtube": ""
+	},
+	"meta": {"decimals": 18}
+}

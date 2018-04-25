@@ -1,0 +1,25 @@
+{
+	"symbol": "LGO",
+	"address": "0x123aB195DD38B1b40510d467a6a359b201af056f",
+	"name": "Legolas Exchange",
+	"ens_address": "",
+	"website": "https://legolas.exchange/",
+	"logo": {"src": "", "width": "", "height": "", "ipfs_hash": ""},
+	"support": {"email": "", "url": ""},
+	"social": {
+		"blog": "",
+		"chat": "",
+		"facebook": "",
+		"forum": "",
+		"github": "",
+		"gitter": "",
+		"instagram": "",
+		"linkedin": "",
+		"reddit": "",
+		"slack": "",
+		"telegram": "",
+		"twitter": "",
+		"youtube": ""
+	},
+	"meta": {"decimals": 8}
+}
