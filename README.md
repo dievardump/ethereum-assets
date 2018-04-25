@@ -91,3 +91,5 @@ I am not willing to split the efforts with the original repository. But our goal
 # Donation
 
 Not against any donation if this repo helps you in any way and you want to say thank you.
+
+0xd1eddfcc4596cc8bd0bd7495beab9b979fc50336
