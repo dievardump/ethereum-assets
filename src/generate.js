@@ -1,7 +1,23 @@
-const {lstatSync, readdirSync, readFileSync, writeFileSync} = require('fs');
-const {join, resolve} = require('path');
+const {
+	lstatSync,
+	readdirSync,
+	readFileSync,
+	writeFileSync,
+	existsSync,
+	mkdirSync,
+} = require('fs');
+const {join, resolve, dirname} = require('path');
 const FileHound = require('filehound');
 const parseArgs = require('minimist');
+
+function ensureDirectoryExistence(filePath) {
+	const dir = dirname(filePath);
+	if (existsSync(dir)) {
+		return true;
+	}
+	ensureDirectoryExistence(dir);
+	mkdirSync(dir);
+}
 
 // arguments parsing
 const argv = parseArgs(process.argv.slice(2));
@@ -23,19 +39,14 @@ if (argv.assets) {
 
 if (argv.properties) {
 	const unique = (curr, index, self) => self.indexOf(curr) === index;
-	const mandatory = [
-		'symbol',
-		'name',
-		'address',
-		'meta',
-	];
+	const mandatory = ['symbol', 'name', 'address', 'meta'];
 
 	filters.properties = mandatory;
 
 	if ('string' === typeof argv.properties) {
-		filters.properties = filters.properties.concat(
-			...argv.properties.split(',')
-		).filter(unique);
+		filters.properties = filters.properties
+			.concat(...argv.properties.split(','))
+			.filter(unique);
 	}
 }
 
@@ -46,13 +57,28 @@ const custom =
 	filters.useNetworksId === true;
 
 let distDir = resolve(join(__dirname, '..', 'dist'));
+let dateStr = '';
 if (custom) {
 	distDir = join(distDir, 'custom');
+	const date = new Date();
+
+	dateStr =
+		'-' +
+		[
+			date.getFullYear(),
+			(date.getMonth() + 1 + '').padStart(2, '0'),
+			date.getDate(),
+			date.getHours(),
+			date.getMinutes(),
+			date.getSeconds(),
+		].join('');
 }
 
 const dataDir = resolve(join(__dirname, '..', 'data'));
 const assetsDir = resolve(join(dataDir, 'assets'));
-const distFile = join(distDir, 'index.json');
+const distFile = resolve(join(distDir, `index${dateStr}.json`));
+
+ensureDirectoryExistence(distFile);
 
 // helpers
 const isDirectory = source => lstatSync(source).isDirectory();
@@ -150,8 +176,6 @@ const nextNetworks = nextGenerate(directories, directory => {
 
 							currentAsset[json.address] = json;
 						}
-
-						console.log('end fl.read');
 					})
 					.finally(nextAssets);
 			} else {
@@ -161,7 +185,8 @@ const nextNetworks = nextGenerate(directories, directory => {
 
 		nextAssets();
 	} else {
-		writeFileSync(join(distDir, 'index.json'), JSON.stringify(generated));
+		writeFileSync(distFile, JSON.stringify(generated));
+		console.log(`Wrote file ${distFile}`);
 	}
 });
 
